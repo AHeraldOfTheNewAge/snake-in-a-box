@@ -1,0 +1,66 @@
+{
+  "name": "snake-in-a-box",
+  "displayName": "snake-in-a-box",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "snake-in-a-box.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "title": "Block Boxes",
+      "properties": {
+        "blockBoxes.colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "#4fc1ff",
+            "#f14c4c",
+            "#dcdcaa",
+            "#4ec9b0",
+            "#c586c0"
+          ],
+          "description": "Border color for each nesting level (level 1 first). Cycles when depth exceeds the list."
+        },
+        "blockBoxes.boxDefsAndClasses": {
+          "type": "boolean",
+          "default": true,
+          "description": "Also draw boxes around def/class blocks and count them as a nesting level."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.140.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
