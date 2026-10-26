@@ -25,4 +25,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
 
-Punch-in Monica is released under the Unlicense.
+snake-in-a-box is released under the Unlicense.
